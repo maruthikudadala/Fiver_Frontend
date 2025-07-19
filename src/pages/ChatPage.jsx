@@ -6,11 +6,11 @@ import { API_URL } from "../utils/apiPath";
 const socket = io(`${API_URL}`);
 
 const ChatPage = () => {
-  const { receiverId } = useParams(); // 👈 Get receiver from URL
+  const { receiverId } = useParams(); 
   const [messages, setMessages] = useState([]);
   const [content, setContent] = useState("");
 
-  const user = JSON.parse(localStorage.getItem("user")); // Your logged-in user
+  const user = JSON.parse(localStorage.getItem("user")); 
   const sender = user?._id;
 
   useEffect(() => {
